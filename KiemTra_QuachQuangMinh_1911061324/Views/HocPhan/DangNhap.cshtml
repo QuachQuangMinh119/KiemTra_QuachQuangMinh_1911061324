@@ -1,0 +1,25 @@
+﻿@model KiemTra_QuachQuangMinh_1911061324.Models.SinhVien
+
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ĐĂNG NHẬP</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.LabelFor(model => model.MaSV, htmlAttributes: new { @class = "" })
+    @Html.EditorFor(model => model.MaSV, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.MaSV, "", new { @class = "text-danger" })
+    <input type="submit" style="margin: 20px 0px; "value="Đăng nhập" class="btn btn-default" />
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Home")
+</div>

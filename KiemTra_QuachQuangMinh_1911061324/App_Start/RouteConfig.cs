@@ -16,7 +16,7 @@ namespace KiemTra_QuachQuangMinh_1911061324
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "SinhVien", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

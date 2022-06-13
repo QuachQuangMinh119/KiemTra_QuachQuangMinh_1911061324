@@ -35,13 +35,15 @@
             @Html.DisplayFor(model => model.NgaySinh)
         </dd>
 
+
         <dt>
             @Html.DisplayNameFor(model => model.Hinh)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Hinh)
+            <img src="@Html.DisplayFor(model => model.Hinh)"  style="width: 350px;height:500px" alt="hinh" />
         </dd>
+
 
         <dt>
             @Html.DisplayNameFor(model => model.MaNganh)
